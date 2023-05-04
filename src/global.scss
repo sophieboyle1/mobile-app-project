@@ -24,3 +24,163 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+  ion-toolbar {
+    --background: #FBD54A;
+  }
+
+  ion-title {
+    font-family: "Lobster";
+    font-size: 1.5rem;
+  }
+
+  .header-image {
+    position: relative;
+  }
+
+.header-text {
+    position: absolute;
+    top: 22%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 3.2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #524400;
+    font-family: "Lobster";
+    font-weight: bold;
+  }
+
+  .sub-header {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    color: #524400;
+    font-family: "body-font";
+  }
+
+  .button-home {
+    position: absolute;
+    top: 70%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    background-color: #f0b642;
+    color: #524400;
+    border-radius: 0.5rem;
+  }
+
+  .button-inner {
+    background-color: #f0b642;
+  }
+
+  ion-grid {
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+    margin-top: 2rem;
+  }
+
+  .label-floating.sc-ion-label-md-h{
+      justify-content: center!important;
+      margin-bottom: 1rem;
+      color: #f0b642;
+      font-family: "Lobster";
+      font-size: 2rem;
+  }
+
+  .main-text{
+    color: #212529;
+    line-height: 1.5;
+  }
+
+  .subscribe {
+	align-items: center;
+	background: #F7971E;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFD200, #F7971E);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFD200, #F7971E);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display: flex;
+	justify-content: center;
+    width: 100%;
+    max-width: 935px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.btn_subscription {
+	background-color: #FFF;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+h3 {
+    color: #524400;
+    font-family: "Lobster", cursive;
+    font-size: 1.75rem!important;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+
+h2 {
+    color: #f0b504d9;
+    font-family: "Lobster", cursive;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.item-native {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+//cocktail cards 
+.cocktail-card:hover {
+	transform: scale(1.02);
+}
+  
+.cocktail-card {
+  padding: 1rem;
+}
+
+.cocktail-image {
+  max-width: 100%;
+  height: auto;
+  //margin-bottom: 10px;
+}
+
+.section-padding {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-subtitle {
+    text-align: center;
+}
+  
+
+
+
