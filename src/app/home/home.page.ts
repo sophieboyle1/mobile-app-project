@@ -3,6 +3,7 @@ import { Geolocation } from '@capacitor/geolocation';
 import { CocktailService } from '../Services/cocktail.service';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,7 @@ export class HomePage {
 
   cocktail: any[] = [];
 
-  constructor(private service: CocktailService) { }
+  constructor(private service: CocktailService, private router: Router) { }
 
   ionViewWillEnter() {
     this.service.GetCocktailData().subscribe(
@@ -41,6 +42,11 @@ export class HomePage {
   subscribe(subscriptionForm: NgForm) {
     // Show thank you message
     this.showThankYouMessage = true;
+  }
+
+  viewCocktailDetails(cocktailId: string) {
+    // Navigate to the CocktailDetailsPage, passing in the cocktail ID as a parameter
+    this.router.navigate(['/details', cocktailId]);
   }
   
 }

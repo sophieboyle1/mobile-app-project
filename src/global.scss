@@ -166,7 +166,6 @@ h2 {
 .cocktail-image {
   max-width: 100%;
   height: auto;
-  //margin-bottom: 10px;
 }
 
 .section-padding {
@@ -208,6 +207,54 @@ ion-footer {
 .footer-text {
   margin-bottom: 1rem;
 }
+
+
+ion-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+ion-button {
+  margin-top: 20px;
+  --background: #FFD400;
+  --border-radius: 20px;
+  --box-shadow: none;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+ion-button:hover {
+  --background: #FFD400;
+}
+
+.gps {
+  text-align: center;
+}
+
+//contact form
+.contact-card {
+  padding: 20px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.contact-card-title {
+  font-size: 24px;
+}
+
+.contact-item {
+  margin-bottom: 15px;
+}
+
+.contact-send-btn {
+  margin-top: 15px;
+  background-color: #F7971E;
+}
+
+
+
   
 
 

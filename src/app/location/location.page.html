@@ -1,13 +1,45 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>location</ion-title>
+    <ion-title>
+      Location
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">location</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+      <h2 class="ion-text-center">Your Current Location</h2>
+    </ion-col>
+  </ion-row>
+  <ion-button (click)="getGPS()">Get GPS</ion-button>
+
+  <div *ngIf="long !== 0 || lat !== 0 || time !== 0">
+    <p class="gps">Longitude: {{long}}</p>
+    <p class="gps">Latitude: {{lat}}</p>
+    <p class="gps">Timestamp: {{time}}</p>
+  </div>
+</ion-content>
+<ion-content>
+  <ion-footer class="custom-footer">
+    <div class="row">
+      <div class="col-md-12 py-3">
+        <div class="mb-5 text-center">
+          <a class="fb-icon" href="https://www.facebook.com/" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a class="tw-icon" href="https://www.twitter.com/" target="_blank">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+          <a class="ins-icon" href="https://www.instagram.com/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a class="pin-icon" href="https://www.pinterest.com/" target="_blank">
+            <ion-icon name="logo-pinterest"></ion-icon>
+          </a>
+        </div>
+        <p class="footer-text">Copyright 2023, Sophie Boyle - Mobile App Project</p>
+      </div>
+  </div>
+</ion-footer>
 </ion-content>

@@ -10,26 +10,49 @@
       <ion-title size="large">contactus</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-card>
+  <div class="ion-text-center">
+  <ion-card class="contact-card">
     <ion-card-header>
-      <ion-card-title>Get in touch with us!</ion-card-title>
+      <ion-card-title class="contact-card-title">Get in touch with us!</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item class="contact-item">
           <ion-label position="stacked">Your name</ion-label>
           <ion-input type="text" [(ngModel)]="name"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item class="contact-item">
           <ion-label position="stacked">Your email</ion-label>
           <ion-input type="email" [(ngModel)]="email"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item class="contact-item">
           <ion-label position="stacked">Your message</ion-label>
           <ion-textarea [(ngModel)]="message"></ion-textarea>
         </ion-item>
       </ion-list>
-      <ion-button expand="block" color="primary" (click)="submitForm()">Send</ion-button>
+      <ion-button expand="block" (click)="submitForm()">Send</ion-button>
     </ion-card-content>
   </ion-card>
+  </div>
+  <ion-footer class="custom-footer">
+    <div class="row">
+      <div class="col-md-12 py-3">
+        <div class="mb-5 text-center">
+          <a class="fb-icon" href="https://www.facebook.com/" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a class="tw-icon" href="https://www.twitter.com/" target="_blank">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+          <a class="ins-icon" href="https://www.instagram.com/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a class="pin-icon" href="https://www.pinterest.com/" target="_blank">
+            <ion-icon name="logo-pinterest"></ion-icon>
+          </a>
+        </div>
+        <p class="footer-text">Copyright 2023, Sophie Boyle - Mobile App Project</p>
+      </div>
+  </div>
+</ion-footer>
 </ion-content>
