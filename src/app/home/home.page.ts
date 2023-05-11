@@ -30,6 +30,10 @@ export class HomePage {
       });
   }
 
+  goToDetails(id: string) {
+    this.router.navigate(['/details', id]);
+  }
+
 
   async getGPS() {
     const coordinates = await Geolocation.getCurrentPosition();
