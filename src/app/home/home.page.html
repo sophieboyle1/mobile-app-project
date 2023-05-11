@@ -7,9 +7,19 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Sláinte
-    </ion-title>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Sláinte</ion-title>
+        <ion-buttons slot="end">
+          <ion-button routerLink="/all">All Cocktails</ion-button>
+          <ion-button routerLink="/location">Location</ion-button>
+          <ion-button routerLink="/contactus">Contact</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
   </ion-toolbar>
 </ion-header>
 
@@ -63,19 +73,40 @@
       </ion-col>
     </ion-row>
     <div class="section-padding">
-    <ion-row>
-      <ion-col size="4" *ngFor="let cocktail of cocktail">
-        <ion-card>
-          <img [src]="cocktail.strDrinkThumb" class="cocktail-card">
-          <ion-card-header>
-            <ion-card-title class="card-title">{{ cocktail.strDrink }}</ion-card-title>
-            <ion-card-subtitle class="card-subtitle">{{ cocktail.strGlass }}</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </div>
-    
+      <ion-row>
+        <ion-col size="4" *ngFor="let cocktail of cocktail">
+          <ion-card>
+            <img [src]="cocktail.strDrinkThumb" class="cocktail-card">
+            <ion-card-header>
+              <ion-card-title class="card-title">{{ cocktail.strDrink }}</ion-card-title>
+              <ion-card-subtitle class="card-subtitle">{{ cocktail.strGlass }}</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-footer class="custom-footer">
+        <div class="row">
+          <div class="col-md-12 py-3">
+            <div class="mb-5 text-center">
+              <a class="fb-icon" href="https://www.facebook.com/" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a class="tw-icon" href="https://www.twitter.com/" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a class="ins-icon" href="https://www.instagram.com/" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a class="pin-icon" href="https://www.pinterest.com/" target="_blank">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </div>
+            <p class="footer-text">Copyright 2023, Sophie Boyle - Mobile App Project</p>
+          </div>
+      </div>
+    </ion-footer>
+
   </ion-content>
 </ion-content>
 

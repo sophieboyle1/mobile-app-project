@@ -160,6 +160,7 @@ h2 {
   
 .cocktail-card {
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .cocktail-image {
@@ -179,6 +180,33 @@ h2 {
 
 .card-subtitle {
     text-align: center;
+}
+
+//footer
+ion-footer {
+	background-color: #FFD400;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.custom-footer {
+  height: 100px;
+}
+
+.py-3 {
+  padding-top: 1rem;
+}
+
+.custom-footer ion-icon {
+  color: #524400;
+  font-weight: 400;
+  font-size: 2rem;
+  padding: .5rem;
+}
+
+.footer-text {
+  margin-bottom: 1rem;
 }
   
 
