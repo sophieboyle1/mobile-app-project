@@ -1,42 +1,54 @@
+<!-- This header is transparent and sits on top of the content -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>contactus</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!-- This is the content of the page -->
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">contactus</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <div class="ion-text-center">
-  <ion-card class="contact-card">
-    <ion-card-header>
-      <ion-card-title class="contact-card-title">Get in touch with us!</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item class="contact-item">
-          <ion-label position="stacked">Your name</ion-label>
-          <ion-input type="text" [(ngModel)]="name"></ion-input>
-        </ion-item>
-        <ion-item class="contact-item">
-          <ion-label position="stacked">Your email</ion-label>
-          <ion-input type="email" [(ngModel)]="email"></ion-input>
-        </ion-item>
-        <ion-item class="contact-item">
-          <ion-label position="stacked">Your message</ion-label>
-          <ion-textarea [(ngModel)]="message"></ion-textarea>
-        </ion-item>
-      </ion-list>
-      <ion-button expand="block" (click)="submitForm()">Send</ion-button>
-    </ion-card-content>
-  </ion-card>
+    <!-- This is the card that contains the contact form -->
+    <ion-card class="contact-card">
+      <ion-card-header>
+        <!-- This is the title of the card -->
+        <ion-card-title class="contact-card-title">Get in touch with us!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <!-- This is the input for the name -->
+          <ion-item class="contact-item">
+            <ion-label position="stacked">Your name</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+          </ion-item>
+          <!-- This is the input for the email -->
+          <ion-item class="contact-item">
+            <ion-label position="stacked">Your email</ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <!-- This is the input for the message -->
+          <ion-item class="contact-item">
+            <ion-label position="stacked">Your message</ion-label>
+            <ion-textarea [(ngModel)]="message"></ion-textarea>
+          </ion-item>
+        </ion-list>
+        <!-- This button submits the form when clicked -->
+        <ion-button expand="block" (click)="submitForm()">Send</ion-button>
+      </ion-card-content>
+    </ion-card>
   </div>
+
+  <!-- This is the footer of the page -->
   <ion-footer class="custom-footer">
     <div class="row">
       <div class="col-md-12 py-3">
+        <!-- This div contains the social media icons -->
         <div class="mb-5 text-center">
           <a class="fb-icon" href="https://www.facebook.com/" target="_blank">
             <ion-icon name="logo-facebook"></ion-icon>
@@ -51,8 +63,10 @@
             <ion-icon name="logo-pinterest"></ion-icon>
           </a>
         </div>
+        <!-- This is the text at the bottom of the page -->
         <p class="footer-text">Copyright 2023, Sophie Boyle - Mobile App Project</p>
       </div>
-  </div>
-</ion-footer>
+    </div>
+  </ion-footer>
 </ion-content>
+

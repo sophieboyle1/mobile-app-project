@@ -13,13 +13,12 @@ export class LocationPage implements OnInit {
   time: number = 0;
 
   constructor() { }
-
+  // Function to get current GPS location
   async getGPS() {
     const coordinates = await Geolocation.getCurrentPosition();
     this.long = coordinates.coords.longitude;
     this.lat = coordinates.coords.latitude;
     this.time = coordinates.timestamp;
-    console.log('Current position:', coordinates);
 
   }
 

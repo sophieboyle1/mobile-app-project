@@ -1,10 +1,3 @@
-<!--<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-    </ion-title>
-  </ion-toolbar>
-</ion-header>-->
-
 <ion-header>
   <ion-toolbar>
     <ion-header>
@@ -12,6 +5,7 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- header and image -->
 <ion-content [fullscreen]="true">
   <div class="header-image">
     <ion-img src="assets/header.png"></ion-img>
@@ -22,11 +16,13 @@
   </div>
   <ion-grid>
     <ion-row>
+      <!-- Create a grid layout with two columns -->
       <ion-col size="5">
         <img src="https://cdn.pixabay.com/photo/2019/06/13/11/28/cocktail-4271392_960_720.jpg" />
       </ion-col>
       <ion-col size="5">
         <ion-item>
+          <!-- Display header text and subheader text -->
           <ion-label class="my-label" position="floating">Let's raise a glass!</ion-label>
           <p class="main-text">What's better than an after-work drink? A virtual happy hour! Gather your friends and
             family, even those
@@ -38,6 +34,7 @@
     </ion-row>
   </ion-grid>
   <ion-content>
+    <!-- Displaying a subscribe form using an ion-card element -->
     <ion-card class="subscribe">
       <ion-card-content>
         <h3 class="mb-3">Subscribe to our Newsletter</h3>
@@ -49,6 +46,7 @@
           <ion-button expand="full" class="btn_subscription" type="submit" [disabled]="!subscriptionForm.form.valid">
             Subscribe</ion-button>
         </form>
+        <!-- Display a thank you message if the user successfully subscribes -->
         <div *ngIf="showThankYouMessage">
           Thank you for subscribing!
         </div>
@@ -56,6 +54,7 @@
     </ion-card>
     <ion-row>
       <ion-col size="12">
+        <!-- Display a section of popular cocktails using a grid layout and API-->
         <h2 class="ion-text-center">Popular Cocktails</h2>
       </ion-col>
     </ion-row>
@@ -72,6 +71,7 @@
         </ion-col>
       </ion-row>
     </div>
+    <!-- footer and social icons -->
     <ion-footer class="custom-footer">
         <div class="row">
           <div class="col-md-12 py-3">

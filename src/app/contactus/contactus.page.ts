@@ -21,7 +21,7 @@ export class ContactusPage implements OnInit {
     // Create the storage database
     this.storage.create();
   }
-
+  //alert box
   async presentAlert(header: string, message: string) {
     const alert = await this.alertController.create({
       header,
@@ -31,7 +31,7 @@ export class ContactusPage implements OnInit {
 
     await alert.present();
   }
-
+  //form validation
   validateForm() {
     if (!this.name || !this.email || !this.message) {
       this.presentAlert('Error', 'Please fill out all fields.');

@@ -6,6 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- header -->
 <ion-content>
   <ion-row>
     <ion-col size="12">
@@ -13,12 +14,13 @@
     </ion-col>
   </ion-row>
   <ion-button (click)="getGPS()">Get GPS</ion-button>
-
+  <!-- long/latt details -->
   <div *ngIf="long !== 0 || lat !== 0 || time !== 0">
     <p class="gps">Longitude: {{long}}</p>
     <p class="gps">Latitude: {{lat}}</p>
     <p class="gps">Timestamp: {{time}}</p>
   </div>
+  <!-- footer -->
 </ion-content>
 <ion-content>
   <ion-footer class="custom-footer">

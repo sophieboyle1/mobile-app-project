@@ -11,18 +11,15 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  long: number = 0;
-  lat: number = 0;
-  time: number = 0;
+  // Declare class properties
   showThankYouMessage: boolean = false;
   email!: string;
 
-
-  cocktail: any[] = [];
+  cocktail: any[] = []; // array to store cocktail data
 
   constructor(private service: CocktailService, private router: Router) { }
 
+  // Method to execute when the page is loaded
   ionViewWillEnter() {
     this.service.GetCocktailData().subscribe(
       (data) => {
@@ -30,27 +27,9 @@ export class HomePage {
       });
   }
 
-  goToDetails(id: string) {
-    this.router.navigate(['/details', id]);
-  }
-
-
-  async getGPS() {
-    const coordinates = await Geolocation.getCurrentPosition();
-    this.long = coordinates.coords.longitude;
-    this.lat = coordinates.coords.latitude;
-    this.time = coordinates.timestamp;
-    console.log('Current position:', coordinates);
-
-  }
   subscribe(subscriptionForm: NgForm) {
     // Show thank you message
     this.showThankYouMessage = true;
-  }
-
-  viewCocktailDetails(cocktailId: string) {
-    // Navigate to the CocktailDetailsPage, passing in the cocktail ID as a parameter
-    this.router.navigate(['/details', cocktailId]);
   }
   
 }
